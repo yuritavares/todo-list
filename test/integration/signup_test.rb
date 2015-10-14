@@ -2,26 +2,26 @@ require 'test_helper'
 
 class SignupTest < ActionDispatch::IntegrationTest
   test 'with a valid data' do
-    visit '/'
-    click_link 'Cadastre-se'
+    visit root_path
+    click_link t('menu.signup')
 
-    fill_in 'Seu nome',   with: 'John Doe'
-    fill_in 'Seu e-mail',   with: 'john.doe@example.com'
-    fill_in 'Sua senha',    with: 'testtest'
-    fill_in 'Confirme sua senha', with: 'testtest'
-    check 'Concordo com os termos de serviço'
-    click_button 'Criar minha conta'
+    fill_in labels('user.name'),   with: 'John Doe'
+    fill_in labels('user.email'),   with: 'john.doe@example.com'
+    fill_in labels('user.password'),    with: 'testtest'
+    fill_in labels('user.password_confirmation'), with: 'testtest'
+    check labels('user.tos')
+    click_button buttons('user.create')
 
-    assert_equal '/login', current_path
-    assert  page.has_text?("Casdastro realizado com sucesso!")
+    assert_equal login_path, current_path
+    assert  page.has_text?(notice('signup.create'))
   end
 
   test 'with a invalid data' do
-    visit '/'
-    click_link 'Cadastre-se'
-    click_button 'Criar minha conta'
+    visit root_path
+    click_link t('menu.signup')
+    click_button buttons('user.create')
 
-    assert_equal '/signup', current_path
-    assert page.has_text?('Verifique o formulário antes de continuar')
+    assert_equal signup_path, current_path
+    assert page.has_text?(form_error)
   end
 end

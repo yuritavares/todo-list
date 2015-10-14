@@ -1,13 +1,14 @@
-<h1>Cadastre-se!</h1>
+<h1>
+  <%= t('signup.title') %>
+</h1>
 
 <p>
-  Para acessar o Taskv, você precisa criar a sua conta. É muito simples não vai
-  levar mais do que um minuto.
+  <%= t('signup.description') %>
 </p>
 
 <% if @user.errors.any? %>
   <p>
-    Verifique o formulário antes de continuar:
+    <%= t('form.error_message') %>
   </p>
 
   <ul>
@@ -19,33 +20,33 @@
   </ul>
 <% end %>
 
-<%= form_for @user, url: '/signup' do |f|  %>
+<%= form_for @user, url: signup_path do |f|  %>
   <p>
-    <%= f.label :name, 'Seu nome' %>
+    <%= f.label :name, t('labels.user.name') %>
     <%= f.text_field :name %>
   </p>
 
   <p>
-    <%= f.label :email, 'Seu e-mail' %>
+    <%= f.label :email, t('labels.user.email') %>
     <%= f.text_field :email %>
   </p>
 
   <p>
-    <%= f.label :password, 'Sua senha' %>
+    <%= f.label :password, t('labels.user.password') %>
     <%= f.password_field :password %>
   </p>
 
   <p>
-    <%= f.label :password_confirmation, 'Confirme sua senha' %>
+    <%= f.label :password_confirmation, t('labels.user.password_confirmation') %>
     <%= f.password_field :password_confirmation %>
   </p>
 
   <p>
     <%= f.check_box :tos %>
-    <%= f.label :tos, 'Concordo com os termos de serviço' %>
+    <%= f.label :tos, t('labels.user.tos') %>
   </p>
 
   <p>
-    <%= f.submit 'Criar minha conta'  %>
+    <%= f.submit %>
   </p>
 <% end %>

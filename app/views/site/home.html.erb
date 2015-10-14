@@ -1,5 +1,7 @@
-<h1>Taskv</h1>
+<h1><%= t('home.title') %></h1>
 
-<p>Bem vindo ao Taskv, o seu gerenciador de tarefas fácil de usar!</p>
+<p>
+  <%= t('home.description') %>
+</p>
 
-<%= link_to 'Cadastre-se', '/signup' %>
+<%= link_to t('menu.signup'), signup_path %>
