@@ -25,6 +25,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   %W[
+    j-doe@example.com
     john@example.com
     john.doe@example.com
     jhon_doe@example.com
