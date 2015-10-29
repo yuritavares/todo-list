@@ -13,6 +13,9 @@ pt-BR:
     password_confirmation: Confirme sua senha
     tos: Concordo com os termos de serviço
 
+   task:
+    title: Descreva sua tarefa
+
    login:
      <<: *labels_defaults
 
@@ -23,3 +26,7 @@ pt-BR:
     update: Atualizar meu perfil
 
    login: Acessar minha conta
+
+   task:
+    create: Adcionar
+    update: Atualizar

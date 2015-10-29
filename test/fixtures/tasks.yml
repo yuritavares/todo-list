@@ -1,0 +1,7 @@
+pending:
+  title: Some pending task
+  user: john
+
+completed:
+  title: Some completed task
+  user: john

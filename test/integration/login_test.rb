@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class LoginTest < ActionDispatch::IntegrationTest
-   test "with valid credentials" do
+   test 'with valid credentials' do
       user = users(:john)
       login_as(user)
 

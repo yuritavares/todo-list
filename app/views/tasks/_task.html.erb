@@ -1,0 +1,10 @@
+<li class= 'task pending'>
+  <input type="checkbox">
+  <%= task.title %>
+
+  <spam class="actions">
+    <%= link_to t('actions.edit'), edit_task_path(task), class: 'edit' %>
+    <%= link_to t('actions.remove'), edit_task_path(task), class: 'remove' %>
+
+  </spam>
+</li>

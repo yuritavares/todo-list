@@ -9,3 +9,12 @@ pt-BR:
     alert: 'Credenciais invalidas, favor checar E-mail/Senha!'
    required:
     alert: 'Você precisa estar logado para acessar está página'
+
+  tasks:
+   create:
+    notice: 'Tarefa adcionada com sucesso!'
+    alert: 'Erro: Verifique a tarefa!'
+   update:
+    notice: 'Tarefa atualizada com sucesso!'
+    alert: 'Erro: Verifique os campos, e tente novamente'
+

@@ -6,47 +6,35 @@
   <%= t('signup.description') %>
 </p>
 
-<% if @user.errors.any? %>
-  <p>
-    <%= t('form.error_message') %>
-  </p>
-
-  <ul>
-    <% for message in @user.errors.full_messages %>
-      <li>
-        <%= message %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<%= render 'form_errors', record: @user %>
 
 <%= form_for @user, url: signup_path do |f|  %>
-  <p>
+  <div class="form-field">
     <%= f.label :name, t('labels.user.name') %>
     <%= f.text_field :name %>
-  </p>
+  </div>
 
-  <p>
+  <div class="form-field">
     <%= f.label :email, t('labels.user.email') %>
     <%= f.text_field :email %>
-  </p>
+  </div>
 
-  <p>
+  <div class="form-field">
     <%= f.label :password, t('labels.user.password') %>
     <%= f.password_field :password %>
-  </p>
+  </div>
 
-  <p>
+  <div class="form-field">
     <%= f.label :password_confirmation, t('labels.user.password_confirmation') %>
     <%= f.password_field :password_confirmation %>
-  </p>
+  </div>
 
-  <p>
+  <div class="form-field checkbox">
     <%= f.check_box :tos %>
     <%= f.label :tos, t('labels.user.tos') %>
-  </p>
+  </div>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="submit">
+    <%= f.submit class: 'button' %>
+  </div>
 <% end %>

@@ -1,2 +1,5 @@
-<%= current_user.name %>
-<%= button_to t('menu.logout'), logout_path, method: 'delete' %>
+<%= render 'form', task: @task, url: new_task_path %>
+
+<ul class='tasks'>
+  <%= render @tasks %>
+</ul>

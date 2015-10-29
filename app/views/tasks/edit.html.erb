@@ -1,0 +1,4 @@
+<%= render 'form_errors', record: @task %>
+<%= link_to t('actions.back'), tasks_path %>
+
+<%= render 'form', task: @task, url: edit_task_path(@task) %>

@@ -8,7 +8,33 @@
 </head>
 <body>
 
-<%= yield %>
+<section>
+  <header>
+    <%= link_to root_path do %>
+      <%= image_tag 'taskv.svg' %>
+    <% end %>
+
+    <nav>
+      <% if logged_in? %>
+        <%= current_user.name %>
+        <%= button_to t('menu.logout'), logout_path, method: 'delete' %>
+      <% else %>
+        <%= link_to t('menu.signup'), signup_path %>
+        <%= link_to t('menu.login'), login_path %>
+      <% end %>
+    </nav>
+  </header>
+
+  <% flash.each do |type, message| %>
+    <p class="message message-<%= type %>">
+      <%= message %>
+    </p>
+  <% end %>
+
+  <div class="content">
+    <%= yield %>
+  </div>
+</section>
 
 </body>
 </html>

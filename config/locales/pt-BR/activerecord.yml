@@ -7,3 +7,6 @@ pt-BR:
         password: Senha
         password_confirmation: Confirmação de senha
         tos: Termos de serviço
+
+      task:
+       title: Título

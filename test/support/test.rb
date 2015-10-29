@@ -18,7 +18,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def alert(scope)
-    t("flash.#{scope}.alert")
+    t  ("flash.#{scope}.alert")
   end
 
   def form_error
