@@ -30,3 +30,4 @@ pt-BR:
    task:
     create: Adcionar
     update: Atualizar
+    remove: Sim, quero remover!

@@ -32,6 +32,16 @@ class TasksController < ApplicationController
     end
   end
 
+  def remove
+    @task = current_user.tasks.find(params[:id])
+  end
+
+  def destroy
+    @task = current_user.tasks.find(params[:id])
+    @task.destroy!
+    redirect_to tasks_path, notice: t('flash.tasks.destroy.notice')
+  end
+
   private
 
   def task_params

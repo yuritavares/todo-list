@@ -16,7 +16,10 @@
 
     <nav>
       <% if logged_in? %>
-        <%= current_user.name %>
+         <span class="user user-small">
+          <%= gravatar_image current_user.email %>
+          <%= current_user.name %>
+        </span>
         <%= button_to t('menu.logout'), logout_path, method: 'delete' %>
       <% else %>
         <%= link_to t('menu.signup'), signup_path %>

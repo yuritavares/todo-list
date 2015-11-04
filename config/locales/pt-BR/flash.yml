@@ -14,7 +14,11 @@ pt-BR:
    create:
     notice: 'Tarefa adcionada com sucesso!'
     alert: 'Erro: Verifique a tarefa!'
+
    update:
     notice: 'Tarefa atualizada com sucesso!'
     alert: 'Erro: Verifique os campos, e tente novamente'
+
+   destroy:
+    notice: 'Tarefa removida com sucesso!'
 

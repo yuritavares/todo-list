@@ -1,0 +1,10 @@
+pt-BR:
+ titles:
+  tasks:
+   remove: Remover Tarefa
+
+ descriptions:
+  tasks:
+   remove_html: |
+    Tem certeza que deseja remover a tarefa <spam class="task_to_delete">"%{title}?"</spam>
+    Não será possível desfazer esta ação.
