@@ -1,5 +1,5 @@
 <li class= 'task pending'>
-  <input type="checkbox">
+  <%= check_box_tag 'tasks_id[]', task.id %>
   <%= task.title %>
 
   <spam class="actions">

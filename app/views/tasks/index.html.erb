@@ -1,5 +1,7 @@
 <%= render 'form', task: @task, url: new_task_path %>
 
-<ul class='tasks'>
-  <%= render @tasks %>
-</ul>
+<%= form_tag tasks_batch_update_path do %>
+  <ul class='tasks'>
+    <%= render @tasks %>
+  </ul>
+<% end %>
