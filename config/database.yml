@@ -2,7 +2,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: localhost
   pool: 5
+  username: postgres
+  password: "142213bi"
 
 development:
   <<: *default
@@ -16,5 +19,4 @@ test:
 production:
   <<: *default
   database: todo-list_production
-  username: todo-list
   password: <%= ENV['TODO-LIST_DATABASE_PASSWORD'] %>

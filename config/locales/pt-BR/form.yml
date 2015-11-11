@@ -31,3 +31,6 @@ pt-BR:
     create: Adcionar
     update: Atualizar
     remove: Sim, quero remover!
+
+   tasks:
+    update: Atualizar

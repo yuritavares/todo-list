@@ -5,3 +5,4 @@ pending:
 completed:
   title: Some completed task
   user: john
+  completed_at: '10/11/2015'

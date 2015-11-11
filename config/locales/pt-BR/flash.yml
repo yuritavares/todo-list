@@ -22,3 +22,6 @@ pt-BR:
    destroy:
     notice: 'Tarefa removida com sucesso!'
 
+   batch_update:
+    notice: 'Tarefas atualizadas com sucesso!'
+

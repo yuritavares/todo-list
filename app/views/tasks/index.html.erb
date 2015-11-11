@@ -1,7 +1,11 @@
-<%= render 'form', task: @task, url: new_task_path %>
+ <%= render 'form', task: @task, url: new_task_path %>
 
-<%= form_tag tasks_batch_update_path do %>
+<%= form_tag tasks_batch_update_path, method: 'patch' do %>
   <ul class='tasks'>
     <%= render @tasks %>
   </ul>
+
+  <p class="submit">
+    <%= submit_tag t('helpers.submit.tasks.update'), class: 'button' %>
+  </p>
 <% end %>

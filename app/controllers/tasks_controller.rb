@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @task = Task.new
-    @tasks = current_user.tasks
+    @tasks = current_user.tasks.sort_by_pending
   end
 
   def create
@@ -40,6 +40,12 @@ class TasksController < ApplicationController
     @task = current_user.tasks.find(params[:id])
     @task.destroy!
     redirect_to tasks_path, notice: t('flash.tasks.destroy.notice')
+  end
+
+  def batch_update
+    TaskStatus.update(current_user, params[:task_ids])
+
+    redirect_to tasks_path, notice: t('flash.tasks.batch_update.notice')
   end
 
   private
